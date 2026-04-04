@@ -1,0 +1,121 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f1a;
+  color: #c8c8f0;
+  min-height: 100vh;
+}
+
+.app-fond { max-width: 960px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+
+.app-entete { text-align: center; margin-bottom: 2.5rem; }
+.app-entete h1 { font-size: 26px; font-weight: 600; color: #e8e8ff; }
+.app-sous-titre { font-size: 13px; color: #6666a0; margin-top: 6px; }
+
+.app-grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.carte-formulaire, .carte-utilisateur {
+  background: #1a1a2e;
+  border: 1px solid #2d2d50;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.badge-type {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  letter-spacing: 0.05em;
+}
+.badge-type.controle { background: #1a2b1a; color: #5DCAA5; }
+.badge-type.ref      { background: #2b1a2b; color: #AFA9EC; }
+.badge-type.lifting  { background: #2b2218; color: #EF9F27; }
+.badge-type.contexte { background: #1a1a35; color: #7F77DD; }
+
+form { display: flex; flex-direction: column; gap: 10px; }
+input, textarea {
+  background: #0f0f1a;
+  border: 1px solid #2d2d50;
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: 13px;
+  color: #c8c8f0;
+  outline: none;
+  width: 100%;
+  font-family: inherit;
+}
+input:focus, textarea:focus { border-color: #7F77DD; }
+textarea { resize: none; }
+
+button {
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+.msg-succes {
+  background: #1a2b1a;
+  color: #5DCAA5;
+  font-size: 12px;
+  padding: 8px 12px;
+  border-radius: 7px;
+  margin-bottom: 12px;
+  border: 1px solid #2d4a2d;
+}
+
+/* Convertisseur */
+.ligne-temp { display: flex; align-items: center; gap: 10px; }
+.champ-temp { flex: 1; }
+.label-temp { font-size: 11px; color: #6666a0; display: block; margin-bottom: 4px; }
+.separateur-temp { font-size: 18px; color: #7F77DD; flex-shrink: 0; }
+.resultat-temp {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #7F77DD;
+  text-align: center;
+}
+
+/* Boutons thématisés */
+.btn-session {
+  width: 100%;
+  margin-top: 10px;
+}
+.btn-session.deconnexion {
+  background: #2b1a1a;
+  color: #F09595;
+  border: 1px solid #4a2d2d;
+}
+.btn-session.deconnexion:hover { background: #3a2020; }
+.btn-session.connexion {
+  background: #1a2b1a;
+  color: #5DCAA5;
+  border: 1px solid #2d4a2d;
+}
+.btn-session.connexion:hover { background: #203020; }
+
+/* Carte utilisateur */
+.user-corps { display: flex; align-items: center; gap: 12px; }
+.avatar {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: #7F77DD;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px; font-weight: 600; color: #fff;
+  flex-shrink: 0;
+}
+.user-nom { font-size: 15px; font-weight: 500; color: #e8e8ff; }
+.user-statut { font-size: 11px; margin-top: 2px; }
+.connecte   { color: #5DCAA5; }
+.deconnecte { color: #888; }
